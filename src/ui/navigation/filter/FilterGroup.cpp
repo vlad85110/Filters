@@ -40,3 +40,9 @@ FilterGroup::FilterGroup(QObject *parent, const Consumer<InstrumentPtr> &setInst
         addAction(action);
     }
 }
+
+void FilterGroup::resetChecked() {
+    if (checkedAction() != nullptr) {
+        checkedAction()->setCheckable(false);
+    }
+}

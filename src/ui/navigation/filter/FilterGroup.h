@@ -13,6 +13,9 @@
 class FilterGroup : public AbstractActionGroup {
 public:
     FilterGroup(QObject *parent, const Consumer<InstrumentPtr> &setInstrument);
+
+public slots:
+    void resetChecked();
 };
 
 

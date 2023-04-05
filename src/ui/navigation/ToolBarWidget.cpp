@@ -38,6 +38,7 @@ ToolBarWidget::ToolBarWidget(Canvas *canvas) {
     addSeparator();
 
     filterGroup = std::make_shared<FilterGroup>(this, setInstrument);
+    connect(canvas, &Canvas::imageLoaded, filterGroup.get(), &FilterGroup::resetChecked);
     addActions(filterGroup->actions());
 
     renderingGroup = std::make_shared<RenderingGroup>(this, showFiltered, showOriginal);
