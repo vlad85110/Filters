@@ -22,6 +22,7 @@ private:
     std::shared_ptr<Instrument> instrument;
 
     const std::shared_ptr<QImage> originalImage;
+
     std::shared_ptr<QImage> notFilteredImage;
     std::shared_ptr<QImage> filteredImage;
     std::shared_ptr<QImage> currentImage;
@@ -38,9 +39,7 @@ public:
     void setTransformationMode(Qt::TransformationMode transformationMode);
 
 private:
-
     QPoint lastMouseLocation;
-
     Qt::TransformationMode transformationMode = Qt::SmoothTransformation;
 
 public:

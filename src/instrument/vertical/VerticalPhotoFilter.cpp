@@ -26,8 +26,8 @@ std::shared_ptr<QImage> VerticalPhotoFilter::run(QImage &image) {
 
     for (int i = 0; i < leftMirror->height(); ++i) {
         for (int j = 0; j < leftMirror->width(); ++j) {
-            auto newX = j;
-//            auto newX = leftMirror->width() - 1 - j;
+//            auto newX = j;
+            auto newX = leftMirror->width() - 1 - j;
 
             leftMirror->setPixel(j, i, image.pixel( newX, i));
         }
@@ -40,8 +40,8 @@ std::shared_ptr<QImage> VerticalPhotoFilter::run(QImage &image) {
 
     for (int i = 0; i < rightMirror->height(); ++i) {
         for (int j = 0; j < rightMirror->width(); ++j) {
-            auto newX = image.width() - rightMirror->width() - 1 + j;
-//            auto newX = image.width() - 1 - j;
+//            auto newX = image.width() - rightMirror->width() - 1 + j;
+            auto newX = image.width() - 1 - j;
 
             rightMirror->setPixel(j, i, image.pixel(newX, i));
         }

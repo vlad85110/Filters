@@ -10,6 +10,9 @@
 #include "instrument/highlight/HighlightFilter.h"
 
 class SobelFilter : public AbstractMatrixFilter, HighlightFilter {
+private:
+    Vector<double> matrix1;
+
 public:
     SobelFilter();
 

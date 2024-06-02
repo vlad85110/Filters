@@ -37,10 +37,10 @@ QRgb OrderedDither::getNewPixelColor(int x, int y, QImage &image, int threadNum)
                                   redColorsCnt);
 
     auto newGreen = findClosetColor((int) (green + green_interval_len * (greenMatrixValue - 0.5)),
-                                    redColorsCnt);
+                                    greenColorsCnt);
 
     auto newBlue = findClosetColor((int) (blue + blue_interval_len * (blueMatrixValue - 0.5)),
-                                   redColorsCnt);
+                                   blueColorsCnt);
 
     return qRgb((int) newRed, (int) newGreen, (int) newBlue);
 }

@@ -4,6 +4,8 @@
 #include <QThreadPool>
 #include <iostream>
 
+#include <cstdlib>
+
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 

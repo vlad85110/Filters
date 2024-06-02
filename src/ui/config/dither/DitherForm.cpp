@@ -12,9 +12,9 @@ DitherForm::DitherForm(AbstractDither &filter) : filter(filter) {
     blueColorsCnt = std::make_shared<DoubleInputWithErrorLabel>(2, 128, filter.getBlueColorsCnt(),
                                                                 QString("Blue colors count"), 0);
 
-    inputs["redCnt"] = redColorsCnt;
-    inputs["greenCnt"] = greenColorsCnt;
-    inputs["blue"] = blueColorsCnt;
+    inputs["3"] = blueColorsCnt;
+    inputs["1"] = redColorsCnt;
+    inputs["2"] = greenColorsCnt;
 
     addInputs();
 }

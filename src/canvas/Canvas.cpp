@@ -125,9 +125,7 @@ void Canvas::mouseMoveEvent(QMouseEvent *event) {
 
 void Canvas::setFileUrl(const QString &url) {
     originalImage->load(url);
-
     notFilteredImage = originalImage;
-
     currentImage = notFilteredImage;
     filteredImage = nullptr;
 

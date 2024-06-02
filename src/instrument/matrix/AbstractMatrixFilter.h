@@ -14,7 +14,7 @@ class AbstractMatrixFilter : public AbstractFilter {
 protected:
     int n;
     int size;
-    int mSum;
+    double mSum;
     Vector<double> matrix;
 
     [[nodiscard]] QRgb getNewPixelColor(int x, int y, QImage &image, int threadNum) override;

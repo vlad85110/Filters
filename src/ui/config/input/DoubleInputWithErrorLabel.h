@@ -36,7 +36,7 @@ public:
 
     void clear() override;
 
-    bool verify() const override;
+    [[nodiscard]] bool verify() const override;
 
 private slots:
     void inputChanged();
